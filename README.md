@@ -1,85 +1,121 @@
-# MovieEra – Full Stack Movie App
+🎬 MovieEra – Full Stack Movie Application
 
-**React (your existing movie-era) + Spring Boot + MySQL**
+A modern movie discovery app where users can browse movies, search, view details, and save favorites.
 
-## Features
-- 🎬 Movie Library (search + popular movies from TMDB)
-- 🔐 Login / Register
-- ❤️ Save Favorite Movies (stored in MySQL)
-- Movie Details page with Add/Remove Favorite
+Frontend → React + Vite + Tailwind CSS
+Backend → Spring Boot + MySQL + JWT Authentication
+Movie Data → TMDB API
 
-## Project Structure
-```
+✨ Features
+🔍 Search movies by title
+🔥 Browse popular movies
+📄 Detailed movie information (overview, rating, poster, etc.)
+🔐 User Registration & Login (JWT)
+❤️ Add / Remove favorite movies
+📚 Personal Favorites library
+🎨 Clean, modern, responsive UI
+📁 Project Structure
 MovieEraFull/
-├── backend/     → Spring Boot (Auth + Favorites API)
-└── frontend/    → React (your movie-era + new pages)
-```
+├── backend/                 → Spring Boot API (Auth + Favorites)
+│   ├── src/main/java/...
+│   ├── src/main/resources/application.properties
+│   └── pom.xml
+│
+├── frontend/                → React Frontend
+│   ├── src/
+│   │   ├── components/
+│   │   ├── pages/
+│   │   ├── context/
+│   │   └── services/
+│   ├── package.json
+│   └── vite.config.js
+│
+└── README.md                → This file
+🛠️ Tech Stack
+Layer	Technology
+Frontend	React 19, Vite, Tailwind CSS, Axios, React Router
+Backend	Spring Boot 3.3, Java 17, Spring Security, JWT
+Database	MySQL 8
+Movie API	The Movie Database (TMDB)
+🚀 How to Run Locally
+Prerequisites
+Java 17+
+Maven
+Node.js 18+
+MySQL 8 (running on port 3306)
+1. Start MySQL
 
----
+Make sure MySQL is running and create a database (optional – the app can create it automatically).
 
-## How to Run (Step by Step)
+Default credentials used in the project:
 
-### Step 1 – Install MySQL
-- Make sure MySQL is installed and running on your computer.
-- Default port: 3306
-- Note your MySQL password (usually for user `root`)
+Username: root
+Password: 12345 (change this!)
+2. Start the Backend
+cd backend
 
-### Step 2 – Start Backend
-1. Open terminal
-2. Go to backend folder:
-   ```bash
-   cd MovieEraFull/backend
-   ```
-3. Open file:  
-   `src/main/resources/application.properties`
-4. Change this line:
-   ```
-   spring.datasource.password=yourpassword
-   ```
-   to your real MySQL password.
-5. Run the backend:
-   ```bash
-   mvn spring-boot:run
-   ```
-6. Wait until you see: `Started MovieEraApplication`
-   → Backend is ready on http://localhost:8080
+Edit src/main/resources/application.properties and update your MySQL password:
 
-### Step 3 – Start Frontend
-1. Open a **new** terminal
-2. Go to frontend folder:
-   ```bash
-   cd MovieEraFull/frontend
-   ```
-3. Install packages (only first time):
-   ```bash
-   npm install
-   ```
-4. Start the app:
-   ```bash
-   npm run dev
-   ```
-5. Open browser: http://localhost:5173
+spring.datasource.password=YOUR_MYSQL_PASSWORD
 
----
+Then run:
 
-## How to Use
-1. Click **Login** → Register a new account (or login)
-2. Go to **Library** → Search or browse popular movies
-3. Click the 🤍 heart on any movie card to save it
-4. Open any movie → click **Add to Favorites**
-5. Go to **❤️ Favorites** page to see all saved movies
+mvn spring-boot:run
 
----
+Backend will start at:
 
-## Requirements
-- Java 17 or higher
-- Maven
-- Node.js 18+
-- MySQL 8
+http://localhost:8080
 
----
+3. Start the Frontend
 
-## Troubleshooting
-- **Backend fails to start** → Check MySQL is running and password is correct
-- **Frontend shows "Failed to load favorites"** → Make sure you are logged in and backend is running
-- **CORS errors** → Backend must be on port 8080, frontend on 5173
+Open a new terminal:
+
+cd frontend
+npm install
+npm run dev
+
+Frontend will start at:
+
+http://localhost:5173
+
+📱 How to Use the App
+Open http://localhost:5173
+Click Login → Create a new account (or login)
+Go to Library or Search to find movies
+Click the ❤️ heart icon or Add to Favorites on a movie
+Visit the Favorites page to see all saved movies
+🔌 API Endpoints
+Method	Endpoint	Description	Auth Required
+POST	/api/auth/register	Register new user	No
+POST	/api/auth/login	Login user	No
+GET	/api/favorites	Get user's favorites	Yes
+POST	/api/favorites	Add a favorite	Yes
+DELETE	/api/favorites/{tmdbId}	Remove a favorite	Yes
+🌐 Environment Variables
+Frontend .env
+VITE_TMDB_API_KEY=your_tmdb_api_key
+VITE_API_URL=http://localhost:8080/api
+Backend application.properties
+spring.datasource.url=jdbc:mysql://localhost:3306/movieera
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+app.jwt.secret=YourVeryLongSecretKeyHere
+📦 Deployment
+Service	Recommended Platform
+Frontend	Vercel / Render / Netlify
+Backend	Render / Railway
+Database	Render Postgres / Railway MySQL / PlanetScale
+
+See the individual frontend/README.md and backend/README.md for more detailed deployment notes.
+
+🐛 Common Issues
+Problem	Solution
+Backend fails to start	Check MySQL is running + correct password
+"Failed to load favorites"	Make sure you are logged in
+CORS errors	Backend must run on port 8080
+TMDB movies not loading	Check VITE_TMDB_API_KEY in frontend .env
+📄 License
+
+This project is for educational / personal use.
+
+Made with ❤️ for movie lovers
