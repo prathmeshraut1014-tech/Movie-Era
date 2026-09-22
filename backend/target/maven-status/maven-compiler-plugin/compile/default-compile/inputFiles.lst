@@ -1,0 +1,15 @@
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\config\SecurityConfig.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\controller\AuthController.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\controller\FavoriteController.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\dto\AuthRequest.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\dto\AuthResponse.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\dto\FavoriteRequest.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\model\Favorite.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\model\User.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\MovieEraApplication.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\repository\FavoriteRepository.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\repository\UserRepository.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\security\JwtAuthFilter.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\security\JwtUtil.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\service\AuthService.java
+C:\Users\prath\Downloads\MovieEraFull\MovieEraFull\backend\src\main\java\com\movieera\service\FavoriteService.java
