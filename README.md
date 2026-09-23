@@ -96,7 +96,7 @@ Frontend .env
 VITE_TMDB_API_KEY=your_tmdb_api_key
 VITE_API_URL=http://localhost:8080/api
 Backend application.properties
-spring.datasource.url=jdbc:mysql://localhost:3306/movieera
+spring.datasource.url=`jdbc:mysql://root:yKZoYIjNsWWzMyfAdGhnPTQhGuDwDNnK@mysql.railway.internal:3306/railway`
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 app.jwt.secret=YourVeryLongSecretKeyHere
