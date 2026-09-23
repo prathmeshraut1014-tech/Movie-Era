@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom'
 import MovieCard from '../components/MovieCard'
 import Loader from '../components/Loader'
 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY
+//const API_KEY = import.meta.env.VITE_TMDB_API_KEY
+const API_URL = import.meta.env.VITE_API_URL;
+fetch(`${API_URL}/api/movies`);
+
 const BASE_URL = 'https://api.themoviedb.org/3'
 
 function Home() {
