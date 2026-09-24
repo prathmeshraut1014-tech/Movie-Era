@@ -1,15 +1,15 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'https://movie-era.onrender.com',
+  baseURL: import.meta.env.VITE_API_URL || '/api',
 })
 
 api.interceptors.request.use((config) => {
-  const token = localStorage.getItem('movieera_token')
+  const token = typeof window !== 'undefined' ? localStorage.getItem('movieera_token') : null
   if (token) {
     config.headers.Authorization = `Bearer ${token}`
   }
   return config
 })
 
-export default api  
+export default api

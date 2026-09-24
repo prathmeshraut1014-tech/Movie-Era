@@ -1,6 +1,7 @@
 com\movieera\dto\FavoriteRequest.class
 com\movieera\security\JwtAuthFilter.class
 com\movieera\service\AuthService.class
+com\movieera\config\CorsConfig.class
 com\movieera\dto\AuthResponse.class
 com\movieera\model\User$UserBuilder.class
 com\movieera\repository\UserRepository.class
@@ -12,6 +13,7 @@ com\movieera\model\User.class
 com\movieera\dto\AuthRequest.class
 com\movieera\model\Favorite$FavoriteBuilder.class
 com\movieera\MovieEraApplication.class
+com\movieera\config\CorsConfig$1.class
 com\movieera\repository\FavoriteRepository.class
 com\movieera\controller\AuthController.class
 com\movieera\controller\FavoriteController.class
