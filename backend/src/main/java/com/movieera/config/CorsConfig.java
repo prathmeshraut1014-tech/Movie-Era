@@ -15,9 +15,11 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(
-                            "http://localhost:3000",           // local frontend
-                            "http://localhost:5173",           // Vite default
-                            "https://movie-era-kappa.vercel.app" // ← replace with your real Vercel URL
+                         "http://localhost:5173",
+                         "http://localhost:5174",
+                         "http://localhost:3000",
+                         "https://movie-era-kappa.vercel.app",
+                         "https://movie-era-git-main-prathmesh-a986.vercel.app"
                         )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "PATCH")
                         .allowedHeaders("*")
