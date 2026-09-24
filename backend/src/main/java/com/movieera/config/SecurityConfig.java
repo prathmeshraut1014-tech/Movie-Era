@@ -54,7 +54,7 @@ public class SecurityConfig {
        config.setAllowedOrigins(List.of(
     "http://localhost:5173",
     "http://localhost:5174",
-    "https://movie-era-kappa.vercel.app"        // replace with your actual Vercel domain
+    "https://movie-era-kappa.vercel.app"       
 ));
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
